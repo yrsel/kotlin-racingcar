@@ -8,6 +8,7 @@ object ConsoleView {
     private const val CAR_NAME_DELIMITER = ","
     private const val TRY_COUNT_MESSAGE = "시도할 횟수는 몇 회인가요?"
     private const val RESULT_GUIDE_MESSAGE = "\n실행 결과"
+    private const val SHOW_WINNER_FORMAT = "최종 우승자: %s"
 
     fun readCarNames(): List<Car> {
         println(CAR_NAME_GUIDE_MESSAGE)
@@ -26,6 +27,10 @@ object ConsoleView {
     fun printCars(cars: Cars) {
         println(cars.cars.joinToString("\n") { car -> car.toStatus() })
         println()
+    }
+
+    fun printWinners(winners: List<String>) {
+        println(SHOW_WINNER_FORMAT.format(winners.joinToString { name -> name }))
     }
 
     private fun Car.toStatus(): String {

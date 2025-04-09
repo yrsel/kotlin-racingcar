@@ -13,6 +13,8 @@ class RacingGame {
 
         ConsoleView.printResultGuideMessage()
         race(tryCount, cars, RandomNumberGenerator())
+
+        ConsoleView.printWinners(cars.winners())
     }
 
     private fun cars(): Cars {
