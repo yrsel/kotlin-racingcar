@@ -10,6 +10,10 @@ class Car(val name: String, position: Int) {
         }
     }
 
+    fun isSamePosition(position: Int): Boolean {
+        return this.position == position
+    }
+
     companion object {
         private const val MOVABLE_LOWER_BOUND = 4
         private const val MOVABLE_UPPER_BOUND = 9
