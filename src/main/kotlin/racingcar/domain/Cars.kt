@@ -1,7 +1,7 @@
 package racingcar.domain
 
 class Cars(
-    private val cars: List<Car>,
+    val cars: List<Car>,
 ) {
     fun race(numberGenerator: NumberGenerator) {
         cars.forEach { car -> car.move(numberGenerator.generateNumber()) }
