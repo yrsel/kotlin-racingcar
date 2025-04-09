@@ -26,7 +26,7 @@ class RacingGame {
         return ConsoleView.readTryCount()
     }
 
-    private fun race(
+    private tailrec fun race(
         tryCount: Int,
         cars: Cars,
         numberGenerator: NumberGenerator,
