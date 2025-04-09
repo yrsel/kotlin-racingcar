@@ -1,7 +1,9 @@
-import domain.Car
-import domain.Cars
+package racingcar
+
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import racingcar.domain.Car
+import racingcar.domain.Cars
 
 class CarsTest {
     @Test

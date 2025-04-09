@@ -1,4 +1,4 @@
-package domain
+package racingcar.domain
 
 class Car(val name: String, position: Int) {
     var position = position

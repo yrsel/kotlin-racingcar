@@ -1,4 +1,6 @@
-import domain.NumberGenerator
+package racingcar
+
+import racingcar.domain.NumberGenerator
 
 class FixedNumberGenerator(
     private val numbers: List<Int>,
