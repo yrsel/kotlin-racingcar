@@ -32,4 +32,19 @@ class CarTest {
         // then
         Assertions.assertThat(actual).isEqualTo(expected)
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = [0, 1, 2, 3])
+    fun `자동차는 4 미만의 숫자가 들어올 경우 이동하지 않는다`(number: Int) {
+        // given
+        val car = Car("chestnut", 0)
+        val expected = 0
+
+        // when
+        car.move(number)
+        val actual = car.position
+
+        // then
+        Assertions.assertThat(actual).isEqualTo(expected)
+    }
 }
